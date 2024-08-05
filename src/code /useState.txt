@@ -1,0 +1,70 @@
+import { useState } from 'react';
+// const [state, setState] = useState(initialState)
+
+const [incrment, setIncrement] = useState(0)
+  console.log(incrment)
+  console.log(setIncrement)
+
+  function increments(){
+    // incrment +=1;
+    setIncrement(incrment+1);
+  }
+  function dec(){
+      setIncrement(incrment-1)
+  }
+  function reset(){
+    setIncrement(incrment===0)
+  }
+  return (
+    <div>
+      <Header />
+      <h1>{incrment}</h1>
+      <button onClick={increments}>+</button>
+      <button onClick={dec}>-</button>
+      <button onClick={reset}>reset</button>
+      <Footer />
+    </div>
+
+
+=============
+import React,{useEffect} from 'react'
+const App = () => {
+  const [incrment, setIncrement] = React.useState(0)
+
+  function increments(){
+    setIncrement(incrment+1);
+  }
+  useEffect(()=>{
+    console.log("first")
+  },[])
+  console.log("second")
+  return (
+    <div>
+      <button onClick={increments}>{incrment}</button>
+    </div>
+  )
+}
+
+export default App
+
+
+===================
+import React,{useEffect} from 'react'
+const App = () => {
+  const [incrment, setIncrement] = React.useState(0)
+
+  function increments(){
+    setIncrement(incrment+1);
+  }
+  useEffect(()=>{
+    console.log("first")
+  },[])
+  console.log("second")
+  return (
+    <div>
+      <button onClick={increments}>{incrment}</button>
+    </div>
+  )
+}
+
+export default App
