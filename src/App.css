@@ -1,5 +1,23 @@
-.title{
-    color: red;
+.app {
+    text-align: center;
+}
+
+.app.light {
+    background-color: white;
+    color: black;
+}
+
+.app.dark {
     background-color: black;
-    font-size: 30px;
+    color: white;
+}
+
+.app-header {
+    margin: 2rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
 }

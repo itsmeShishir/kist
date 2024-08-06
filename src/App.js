@@ -4,6 +4,7 @@ import Footer from './components/footer'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/home.jsx'
 import SingeProduct from './pages/singlepage.jsx'
+
 const App = () => {
   return (
     <div>
@@ -11,7 +12,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products' element="Hello From products Page"/>
-        <Route path='/singlepage' element={<SingeProduct />}/>
+        <Route path='/singlepage/:id' element={<SingeProduct />}/>
+        <Route path="*" element="404 Page not found" />
       </Routes>
       <Footer />
     </div>
